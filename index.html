@@ -1,14 +1,25 @@
 <!doctype html>
-<html lang="pt-BR" class="dark">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230ea5e9' width='100' height='100'/><text x='50' y='70' font-size='60' font-weight='bold' fill='white' text-anchor='middle'>DB</text></svg>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Discord Bot Prompt Builder - Crie prompts profissionais para bots de Discord" />
-    <title>Discord Bot Prompt Builder - Gerador de Prompts para Bots</title>
+    <meta name="theme-color" content="#0ea5e9" />
+    <meta name="description" content="Crie prompts profissionais para bots Discord de forma visual e intuitiva" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Bot Builder" />
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%230ea5e9' width='180' height='180' rx='40'/><text x='90' y='120' font-size='90' font-weight='bold' fill='white' text-anchor='middle'>DB</text></svg>" />
+    <link rel="manifest" href="/manifest.json" />
+    <title>Discord Bot Prompt Builder</title>
   </head>
-  <body class="bg-dark-950 text-dark-50">
+  <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js').catch(err => console.log('SW registration failed:', err));
+      }
+    </script>
   </body>
 </html>
